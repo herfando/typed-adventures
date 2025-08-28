@@ -1,26 +1,17 @@
 {
   "compilerOptions": {
-    // Environment Settings
-    "module": "ES6",                      // Browser friendly
-    "target": "ES6",                      // Modern JS output
-    "types": [],                           // Tidak perlu node types untuk frontend
-    "lib": ["ES6", "DOM"],                // Support DOM API
-
-    // Output
-    "outDir": "dist",                      // Semua .js hasil compile masuk dist
-    "sourceMap": true,                     // Debugging di browser
-    "declaration": true,                   // Generate .d.ts (opsional)
-    "declarationMap": true,                // Map untuk .d.ts (opsional)
-
-    // Stricter Typechecking Options
+    "module": "ES6",
+    "target": "ES6",
+    "types": [],
+    "lib": ["ES6", "DOM"],
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-
-    // Style Options (tetap optional)
     "strict": true,
-
-    // Non-React frontend options
-    "jsx": "preserve",                     // Hanya jika pakai React, bisa diabaikan
+    "jsx": "preserve",
     "verbatimModuleSyntax": false,
     "isolatedModules": false,
     "noUncheckedSideEffectImports": false,
