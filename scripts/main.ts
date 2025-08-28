@@ -1,13 +1,18 @@
-// Greeting
-const greet = (name: string): string => {
-  return `Hello, ${name}! Welcome to Typed Adventures.`;
-};
+// Greeting console
+const greet = (name:string):string => `Hello, ${name}! Welcome to Typed Adventures.`;
 console.log(greet("Her Fando"));
 
-// Hero fade in handled by CSS, JS optional for scroll effects
+// Footer appear on scroll
 window.addEventListener("scroll", () => {
   const footer = document.querySelector("footer") as HTMLElement;
-  if (window.scrollY + window.innerHeight > document.body.scrollHeight - 100) {
+  if(window.scrollY + window.innerHeight > document.body.scrollHeight - 100) {
     footer.classList.add("show");
   }
+});
+
+// Button interaction for feature cards
+document.querySelectorAll(".card-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    alert("Feature clicked! Keep learning!");
+  });
 });

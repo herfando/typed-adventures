@@ -3,7 +3,7 @@
     "module": "ES6",
     "target": "ES6",
     "types": [],
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES6","DOM"],
     "outDir": "dist",
     "sourceMap": true,
     "declaration": true,

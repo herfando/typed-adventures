@@ -1,8 +1,14 @@
-// Example TypeScript code
-var greet = function (name) {
-    return "Hello, ".concat(name, "! Welcome to Typed Adventures.");
+"use strict";
+// Greeting
+const greet = (name) => {
+    return `Hello, ${name}! Welcome to Typed Adventures.`;
 };
 console.log(greet("Her Fando"));
-// Example: DOM manipulation
-var heroHeader = document.querySelector(".hero h1");
-heroHeader.style.color = "darkblue";
+// Hero fade in handled by CSS, JS optional for scroll effects
+window.addEventListener("scroll", () => {
+    const footer = document.querySelector("footer");
+    if (window.scrollY + window.innerHeight > document.body.scrollHeight - 100) {
+        footer.classList.add("show");
+    }
+});
+//# sourceMappingURL=main.js.map

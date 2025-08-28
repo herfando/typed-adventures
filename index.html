@@ -7,43 +7,64 @@
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">Typed Adventures</a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1 class="fade-in">Learn TypeScript Like a Pro</h1>
-    <p class="fade-in delay">Interactive exercises and projects to level up your skills.</p>
-    <a href="about.html" class="btn scale-hover fade-in delay2">Start Learning</a>
-  </header>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html" class="logo">Typed Adventures</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="feature-card slide-up">
-      <h3>Basics</h3>
-      <p>Variables, types, functions, and control flow.</p>
-    </div>
-    <div class="feature-card slide-up delay1">
-      <h3>Advanced</h3>
-      <p>Generics, interfaces, type aliases, and more.</p>
-    </div>
-    <div class="feature-card slide-up delay2">
-      <h3>Projects</h3>
-      <p>Real-world coding challenges for your portfolio.</p>
-    </div>
-  </section>
+<!-- Hero -->
+<header class="hero">
+  <h1 class="fade-in">Learn TypeScript Like a Pro</h1>
+  <p class="fade-in delay">Interactive exercises & projects for your portfolio</p>
+  <a href="#features" class="btn scale-hover fade-in delay2">Explore Features</a>
+</header>
 
-  <!-- Footer -->
-  <footer class="fade-in-footer">
-    <p>&copy; 2025 Typed Adventures. All rights reserved.</p>
-  </footer>
+<!-- Features Section -->
+<section id="features" class="features">
+  <div class="feature-card slide-up">
+    <h3>Basics</h3>
+    <p>Variables, types, functions, and control flow.</p>
+    <button class="btn card-btn">Try Now</button>
+  </div>
+  <div class="feature-card slide-up delay1">
+    <h3>Advanced</h3>
+    <p>Generics, interfaces, type aliases, and more.</p>
+    <button class="btn card-btn">Try Now</button>
+  </div>
+  <div class="feature-card slide-up delay2">
+    <h3>Projects</h3>
+    <p>Real-world coding challenges for your portfolio.</p>
+    <button class="btn card-btn">Try Now</button>
+  </div>
+</section>
 
-  <script src="dist/main.js"></script>
+<!-- Testimonials -->
+<section class="testimonials">
+  <h2 class="fade-in">What People Say</h2>
+  <div class="testimonial-slide slide-up">
+    <p>"This is the best TypeScript learning platform ever!"</p>
+    <span>- Jane Doe</span>
+  </div>
+  <div class="testimonial-slide slide-up delay1">
+    <p>"Smooth animations make learning fun and interactive."</p>
+    <span>- John Smith</span>
+  </div>
+  <div class="testimonial-slide slide-up delay2">
+    <p>"Professional and clean design, highly recommended."</p>
+    <span>- Alice Brown</span>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="fade-in-footer">
+  <p>&copy; 2025 Typed Adventures. All rights reserved.</p>
+</footer>
+
+<script src="dist/main.js"></script>
 </body>
 </html>
