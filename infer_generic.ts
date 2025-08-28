@@ -1,3 +1,6 @@
-const a = new Set<string>();
-a.add('hello');
-a.add(123); // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+type GetReturnItem<T> = T extends (...args: any[]) => infer R ? R : never
+
+type A = GetReturnItem<string[] => number>; // string
+type B = GetReturnItem<number>; // number
+type C = GetReturnItem<Custom>;
+type D = GetReturnItem<C(a:string):boolean)> // boolean
