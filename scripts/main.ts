@@ -5,6 +5,8 @@ const greet = (name: string): string => {
 
 console.log(greet("Her Fando"));
 
-// Example: DOM manipulation
+// Example DOM manipulation
 const heroHeader = document.querySelector(".hero h1") as HTMLElement;
-heroHeader.style.color = "darkblue";
+if (heroHeader) {
+  heroHeader.style.color = "darkblue";
+}
