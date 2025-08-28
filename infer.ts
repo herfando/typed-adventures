@@ -1,8 +1,6 @@
-type GetReturnItem<T> = T extends (infer U)[] ? U : T;
+type GetReturnItem<T> = T extends (...args: any[]) => infer R ? R : never
 
-type A = GetReturnItem<string[]>; // string
+type A = GetReturnItem<string[] => number>; // string
 type B = GetReturnItem<number>; // number
 type C = GetReturnItem<Custom>;
-
-console.log(A);
-console.log(B);
+type D = GetReturnItem<C(a:string):boolean)> // boolean
