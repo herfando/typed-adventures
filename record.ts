@@ -1,5 +1,12 @@
+type CustomData =m {
+    nama: string;
+}
+
 type Score = Record<"math" | "english" | "science", number>;
 type Score = {
+    math: number,
+    english: number,
+    science: number,
 
 }
 
