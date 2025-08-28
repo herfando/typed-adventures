@@ -1,44 +1,31 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
-
     // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    "module": "ES6",                      // Browser friendly
+    "target": "ES6",                      // Modern JS output
+    "types": [],                           // Tidak perlu node types untuk frontend
+    "lib": ["ES6", "DOM"],                // Support DOM API
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // Output
+    "outDir": "dist",                      // Semua .js hasil compile masuk dist
+    "sourceMap": true,                     // Debugging di browser
+    "declaration": true,                   // Generate .d.ts (opsional)
+    "declarationMap": true,                // Map untuk .d.ts (opsional)
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
+    // Style Options (tetap optional)
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+
+    // Non-React frontend options
+    "jsx": "preserve",                     // Hanya jika pakai React, bisa diabaikan
+    "verbatimModuleSyntax": false,
+    "isolatedModules": false,
+    "noUncheckedSideEffectImports": false,
+    "moduleDetection": "auto",
+    "skipLibCheck": true
+  },
+  "include": ["scripts/**/*.ts"]
 }
