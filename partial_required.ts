@@ -1,0 +1,1 @@
+type User = { id: number; name ?}
