@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panduan Lengkap CSS, Tailwind, JS, TS</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1, h2 { color: #1F77B4; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
+th { background-color: #4A90E2; color: white; }
+tr:nth-child(even) { background-color: #f2f2f2; }
+code { background-color: #eee; padding: 2px 4px; display: block; white-space: pre-wrap; }
+.page-break { page-break-after: always; }
+</style>
+</head>
+<body>
+
+<h1>CSS (Cascading Style Sheets)</h1>
+<table>
+<thead>
+<tr><th>Fitur</th><th>Fungsi / Penjelasan Lengkap</th><th>Contoh / Cara Pakai</th></tr>
+</thead>
+<tbody>
+<tr><td>Selector</td><td>Digunakan untuk memilih elemen HTML tertentu agar bisa diberikan style. Misalnya memilih semua paragraf, div tertentu, atau elemen dengan class/id tertentu.</td><td><code>p { color: red; } .box { margin: 10px; } #header { background: blue; }</code></td></tr>
+<tr><td>Box Model</td><td>Mengatur ruang elemen meliputi content, padding, border, dan margin. Penting untuk memahami layout dan jarak antar elemen.</td><td><code>div { padding: 10px; border: 2px solid black; margin: 5px; }</code></td></tr>
+<tr><td>Display</td><td>Kontrol bagaimana elemen ditampilkan: block, inline, flex, grid, atau hidden. Sangat penting untuk layouting.</td><td><code>div { display: flex; } span { display: inline; }</code></td></tr>
+<tr><td>Position</td><td>Menentukan posisi elemen dalam halaman: relative, absolute, fixed, sticky.</td><td><code>div { position: absolute; top: 10px; left: 20px; }</code></td></tr>
+<tr><td>Flexbox</td><td>Layout fleksibel satu dimensi, mengatur arah (row/column), alignment, dan wrapping elemen anak.</td><td><code>div { display: flex; justify-content: center; align-items: center; }</code></td></tr>
+<tr><td>Grid</td><td>Layout dua dimensi untuk baris dan kolom, mengatur area dan jarak antar elemen.</td><td><code>div { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }</code></td></tr>
+<tr><td>Typography</td><td>Mengatur font, ukuran, spasi antar huruf, tinggi baris, dan gaya teks untuk tampilan lebih enak dibaca.</td><td><code>p { font-family: Arial; font-size:16px; line-height:1.5; letter-spacing:0.5px; }</code></td></tr>
+<tr><td>Colors</td><td>Menentukan warna teks dan background. Bisa menggunakan HEX, RGB, HSL, atau variabel CSS.</td><td><code>p { color: #ff0000; background-color: rgb(0,0,255); }</code></td></tr>
+<tr><td>Background</td><td>Mengatur background color, gambar, posisi, dan pengulangan.</td><td><code>div { background-image: url('img.jpg'); background-size: cover; }</code></td></tr>
+<tr><td>Pseudo-class</td><td>Memberikan style untuk kondisi tertentu seperti hover, focus, active.</td><td><code>a:hover { color: red; } input:focus { border-color: blue; }</code></td></tr>
+<tr><td>Pseudo-element</td><td>Membuat elemen virtual sebelum atau sesudah konten untuk dekorasi atau styling tambahan.</td><td><code>p::first-line { font-weight: bold; } div::after { content:'*'; }</code></td></tr>
+<tr><td>Responsive</td><td>Membuat layout dan elemen menyesuaikan ukuran layar menggunakan media queries.</td><td><code>@media (max-width:600px) { body { font-size:14px; } }</code></td></tr>
+<tr><td>Transition</td><td>Memberikan efek perubahan halus ketika properti CSS berubah.</td><td><code>div { transition: all 0.3s ease; }</code></td></tr>
+<tr><td>Animation</td><td>Membuat animasi kompleks dengan keyframes dan property animasi.</td><td><code>@keyframes slide { from {opacity:0;} to {opacity:1;} }</code></td></tr>
+<tr><td>Transform</td><td>Efek transformasi elemen seperti rotasi, scaling, translasi, skew.</td><td><code>div { transform: rotate(45deg) scale(1.2); }</code></td></tr>
+<tr><td>Variables</td><td>Menyimpan nilai yang bisa digunakan ulang di CSS agar konsisten.</td><td><code>:root { --main-color: red; } p { color: var(--main-color); }</code></td></tr>
+<tr><td>Z-index</td><td>Menentukan lapisan elemen dalam stack, lebih besar lebih di atas.</td><td><code>div { position: relative; z-index: 10; }</code></td></tr>
+</tbody>
+</table>
+<div class="page-break"></div>
+
+<h1>Tailwind CSS</h1>
+<table>
+<thead>
+<tr><th>Kategori</th><th>Fungsi / Penjelasan Lengkap</th><th>Contoh / Cara Pakai</th></tr>
+</thead>
+<tbody>
+<tr><td>Layout</td><td>Utility class untuk mengatur struktur halaman, membuat container, mengatur tampilan blok, flex, atau grid.</td><td><code>&lt;div class='container mx-auto flex grid hidden'&gt;&lt;/div&gt;</code></td></tr>
+<tr><td>Flex/Grid</td><td>Mengatur arah dan alignment elemen anak, mengatur jumlah kolom grid dan jarak.</td><td><code>&lt;div class='flex flex-row items-center grid grid-cols-3 gap-4'&gt;&lt;/div&gt;</code></td></tr>
+<tr><td>Spacing</td><td>Mengatur margin dan padding secara cepat tanpa menulis CSS manual.</td><td><code>class='p-4 px-2 m-2 mt-4'</code></td></tr>
+<tr><td>Sizing</td><td>Mengatur ukuran lebar, tinggi, dan maksimum elemen.</td><td><code>class='w-full w-1/2 h-screen max-w-lg'</code></td></tr>
+<tr><td>Typography</td><td>Mengatur font, ukuran, ketebalan, dan tracking teks.</td><td><code>class='text-xl font-bold tracking-wide'</code></td></tr>
+<tr><td>Colors</td><td>Mengatur warna teks, background, border dengan skala Tailwind.</td><td><code>class='text-red-500 bg-blue-200 border-gray-400'</code></td></tr>
+<tr><td>Border/Radius</td><td>Mengatur garis tepi dan sudut elemen dengan cepat.</td><td><code>class='border rounded-md rounded-full'</code></td></tr>
+<tr><td>Background</td><td>Mengatur background color atau gradient menggunakan utility class.</td><td><code>class='bg-gradient-to-r from-blue-500 to-green-400'</code></td></tr>
+<tr><td>Effects</td><td>Shadow, opacity, dan efek visual lain agar elemen lebih menarik.</td><td><code>class='shadow-lg opacity-50'</code></td></tr>
+<tr><td>Transform</td><td>Mengatur transformasi seperti scale, rotate, translate.</td><td><code>class='transform scale-105 rotate-45'</code></td></tr>
+<tr><td>Transition</td><td>Efek perubahan halus saat state berubah.</td><td><code>class='transition-all duration-300'</code></td></tr>
+<tr><td>Order/Grid Span</td><td>Mengatur urutan elemen dalam flex/grid atau span kolom/row.</td><td><code>class='order-1 col-span-2'</code></td></tr>
+<tr><td>Responsive</td><td>Prefix sm:, md:, lg: untuk menyesuaikan style per breakpoint.</td><td><code>class='sm:w-1/2 lg:grid-cols-4'</code></td></tr>
+<tr><td>Dark Mode</td><td>Mengatur style untuk mode gelap menggunakan class 'dark'.</td><td><code>class='dark:bg-gray-900 dark:text-white'</code></td></tr>
+<tr><td>State Variants</td><td>Mengatur state interaksi seperti hover, focus, active.</td><td><code>class='hover:bg-blue-500 focus:ring'</code></td></tr>
+</tbody>
+</table>
+<div class="page-break"></div>
+
+<h1>JavaScript</h1>
+<table>
+<thead>
+<tr><th>Fitur</th><th>Fungsi / Penjelasan Lengkap</th><th>Contoh / Cara Pakai</th></tr>
+</thead>
+<tbody>
+<tr><td>Variabel</td><td>Menyimpan data. Gunakan var, let, const untuk mendeklarasikan variabel.</td><td><code>let name = 'Fando'; const age = 25; var isActive = true;</code></td></tr>
+<tr><td>Tipe Data</td><td>Menyimpan tipe primitif (string, number, boolean) atau reference (object, array).</td><td><code>let str = 'Hello'; let num = 10; let arr = [1,2,3]; let obj = {name:'Fando'};</code></td></tr>
+<tr><td>Operator</td><td>Melakukan operasi aritmatika, logika, perbandingan, dan ternary.</td><td><code>x + y, x && y, x === y, condition ? a : b</code></td></tr>
+<tr><td>Function</td><td>Blok kode yang bisa dipanggil ulang, termasuk function biasa dan arrow function.</td><td><code>function add(a,b){return a+b;} const mult = (x,y)=>x*y;</code></td></tr>
+<tr><td>Scope</td><td>Lingkup hidup variabel: global, lokal, atau block.</td><td><code>let a=1; { let b=2; }</code></td></tr>
+<tr><td>Object</td><td>Menyimpan data dengan key:value.</td><td><code>let user = {name:'Fando', age:25};</code></td></tr>
+<tr><td>Array</td><td>List data berurutan, bisa diiterasi dan diubah.</td><td><code>let nums = [1,2,3]; nums.map(n=>n*2);</code></td></tr>
+<tr><td>Prototype</td><td>Mewarisi properti/metode di JavaScript.</td><td><code>function Person(){} Person.prototype.sayHi = ()=>{};</code></td></tr>
+<tr><td>Class</td><td>Blueprint OOP di JS untuk membuat object.</td><td><code>class User{ constructor(name){this.name=name;} }</code></td></tr>
+<tr><td>DOM</td><td>Manipulasi HTML/elemen di halaman.</td><td><code>document.querySelector('#id').textContent = 'Hello';</code></td></tr>
+<tr><td>Event</td><td>Menangani aksi user seperti klik, submit, input.</td><td><code>button.addEventListener('click',()=>alert('clicked'));</code></td></tr>
+<tr><td>Async</td><td>Menangani operasi non-blocking seperti timer atau request API.</td><td><code>setTimeout(()=>console.log('done'),1000); fetch(url);</code></td></tr>
+<tr><td>Promise</td><td>Menangani hasil async secara chaining.</td><td><code>fetch(url).then(res=>res.json()).then(data=>console.log(data));</code></td></tr>
+<tr><td>Async/Await</td><td>Sintaks modern untuk menulis async lebih mudah dibaca.</td><td><code>const data = await fetchData();</code></td></tr>
+<tr><td>Module</td><td>Membagi kode menjadi file yang bisa diimport/export.</td><td><code>import {func} from './file.js'; export function func(){};</code></td></tr>
+<tr><td>Error Handling</td><td>Menangani error agar tidak crash.</td><td><code>try { risky(); } catch(e){ console.log(e); }</code></td></tr>
+</tbody>
+</table>
+<div class="page-break"></div>
+
+<h1>TypeScript</h1>
+<table>
+<thead>
+<tr><th>Fitur</th><th>Fungsi / Penjelasan Lengkap</th><th>Contoh / Cara Pakai</th></tr>
+</thead>
+<tbody>
+<tr><td>Tipe Data</td><td>Menentukan tipe data variabel agar lebih aman dan mudah dipahami.</td><td><code>let age: number = 25; let name: string = 'Fando'; let active: boolean = true;</code></td></tr>
+<tr><td>Array & Tuple</td><td>Array memiliki tipe tunggal, tuple memiliki urutan dan tipe tetap.</td><td><code>let arr: number[] = [1,2]; let tup: [string,number] = ['A',1];</code></td></tr>
+<tr><td>Union</td><td>Variabel bisa memiliki lebih dari satu tipe data.</td><td><code>let val: string | number; val = 'hello'; val = 123;</code></td></tr>
+<tr><td>Intersection</td><td>Menggabungkan beberapa tipe menjadi satu.</td><td><code>type A = X & Y; let obj: A = {...};</code></td></tr>
+<tr><td>Interface</td><td>Menentukan kontrak struktur object agar konsisten.</td><td><code>interface User { name: string; age:number; }</code></td></tr>
+<tr><td>Type Alias</td><td>Memberi nama lain untuk tipe data kompleks.</td><td><code>type ID = string | number;</code></td></tr>
+<tr><td>Enum</
