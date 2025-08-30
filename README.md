@@ -33,4 +33,5 @@ Here are some of the adventures you can explore:
 
 ## 🛠️ Prerequisites
 
-Before starting, make sure you hav
+Before starting, make sure you hav, 
+ok you can check in your VSCODE
